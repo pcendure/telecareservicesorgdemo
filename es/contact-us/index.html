@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos – Telecare Services</title>
+    <link rel="stylesheet" href="../../assets/css/redesign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .office-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .office-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .office-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-section {
+            margin-bottom: 4rem;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .map-wrapper {
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            margin-top: 2rem;
+            height: 300px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../../assets/wp-content/uploads/2023/11/T1.png" alt="Telecare Services Logo">
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="../index.html">INICIO</a></li>
+                            <li><a href="../who-we-are/index.html">QUIÉNES SOMOS</a></li>
+                            <li><a href="../services/index.html">QUÉ HACEMOS</a></li>
+                            <li><a href="../career/index.html">CARRERAS</a></li>
+                            <li><a href="index.html">CONTÁCTENOS</a></li>
+                        </ul>
+                    </nav>
+                    <div class="lang-switcher">
+                        <a href="../../contact-us/index.html">EN</a> |
+                        <a href="index.html" class="active">ES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Hero -->
+        <section class="hero" style="min-height: 40vh; padding: 4rem 0;">
+            <div class="container" style="text-align: center;">
+                <h1>Contáctenos</h1>
+                <p style="max-width: 800px; margin: 0 auto;">¿Tiene preguntas sobre nuestros servicios o necesita
+                    realizar una referencia? Estamos aquí para ayudarle. Comuníquese con una de nuestras oficinas o
+                    utilice los formularios a continuación.</p>
+            </div>
+        </section>
+
+        <!-- Office Grid -->
+        <section class="services-section" style="background: var(--bg-cream);">
+            <div class="container">
+                <div class="testimonial-grid">
+                    <!-- Main Office -->
+                    <div class="office-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Oficina Principal</h3>
+                        <p>165 Log Canoe Circle, Suite G,<br>Stevensville, MD 21666</p>
+                        <p><strong>Teléfono:</strong> (443) 249-3285</p>
+                        <p><strong>Email:</strong> info@telecareservices.org</p>
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://maps.google.com/maps?q=165%20Log%20Canoe%20Circle%2C%20Stevensville%20MD%2021666&t=m&z=14&output=embed"></iframe>
+                        </div>
+                    </div>
+                    <!-- Silver Spring Office -->
+                    <div class="office-card">
+                        <i class="fas fa-city"></i>
+                        <h3>Oficina de Silver Spring</h3>
+                        <p>8730 Georgia Avenue, Suite 600A,<br>Silver Spring, MD 20910</p>
+                        <p><strong>Teléfono:</strong> (301) 576-0555</p>
+                        <p><strong>Email:</strong> info@telecareservices.org</p>
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://maps.google.com/maps?q=8730%20Georgia%20Avenue%2C%20Suite%20600A%2C%20Silver%20Spring%2C%20MD%2020910&t=m&z=14&output=embed"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section class="contact-section">
+            <div class="container">
+
+                <!-- Message Form -->
+                <div id="message-form" class="form-section">
+                    <div class="contact-box">
+                        <div class="contact-info">
+                            <h2>Envíanos un Mensaje</h2>
+                            <p>¿Tiene más preguntas sobre nuestros servicios? Por favor, háganoslo saber. Nos pondremos
+                                en contacto con usted lo antes posible.</p>
+                        </div>
+                        <div class="contact-form-wrap">
+                            <form action="../../contact-handler.php" method="POST">
+                                <input type="hidden" name="form_type" value="contact">
+                                <div class="form-group"
+                                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                    <div>
+                                        <label>Nombre *</label>
+                                        <input type="text" name="first_name" class="form-control" required>
+                                    </div>
+                                    <div>
+                                        <label>Apellido *</label>
+                                        <input type="text" name="last_name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Correo Electrónico *</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Número de Teléfono *</label>
+                                    <input type="tel" name="phone" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mensaje *</label>
+                                    <textarea name="message" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Pregunta de Seguridad: ¿Cuánto es 2 + 2? *</label>
+                                    <input type="number" name="math_answer" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar
+                                    Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Referral Form -->
+                <div id="referral-form" class="form-section" style="margin-top: 6rem;">
+                    <div class="form-title">
+                        <h2>Formulario de Referencia</h2>
+                        <p>¿Conoce a alguien que pueda beneficiarse de nuestros servicios? Refiéralo hoy mismo.</p>
+                    </div>
+                    <div class="contact-box" style="grid-template-columns: 1fr;">
+                        <div class="contact-form-wrap" style="padding: 4rem;">
+                            <form action="../../contact-handler.php" method="POST"
+                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <input type="hidden" name="form_type" value="referral">
+
+                                <div style="grid-column: 1 / -1;">
+                                    <h3
+                                        style="color: var(--primary); margin-bottom: 1rem; border-bottom: 2px solid var(--bg-cream); padding-bottom: 0.5rem;">
+                                        Información del Referente</h3>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nombre del Referente *</label>
+                                    <input type="text" name="referrer_name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Organización (si aplica)</label>
+                                    <input type="text" name="organization" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Número de Teléfono *</label>
+                                    <input type="tel" name="referrer_phone" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Correo Electrónico *</label>
+                                    <input type="email" name="referrer_email" class="form-control" required>
+                                </div>
+
+                                <div style="grid-column: 1 / -1; margin-top: 1rem;">
+                                    <h3
+                                        style="color: var(--primary); margin-bottom: 1rem; border-bottom: 2px solid var(--bg-cream); padding-bottom: 0.5rem;">
+                                        Información del Participante</h3>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nombre del Participante *</label>
+                                    <input type="text" name="participant_name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Relación con el Participante *</label>
+                                    <input type="text" name="relationship" class="form-control" required
+                                        placeholder="ej. Cuidador, Administrador de Caso, Familia">
+                                </div>
+                                <div class="form-group">
+                                    <label>Teléfono del Participante</label>
+                                    <input type="tel" name="participant_phone" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Correo del Participante (si aplica)</label>
+                                    <input type="email" name="participant_email" class="form-control">
+                                </div>
+                                <div class="form-group" style="grid-column: 1 / -1;">
+                                    <label>Dirección *</label>
+                                    <input type="text" name="address" class="form-control" required>
+                                </div>
+
+                                <div style="grid-column: 1 / -1; margin-top: 1rem;">
+                                    <h3
+                                        style="color: var(--primary); margin-bottom: 1rem; border-bottom: 2px solid var(--bg-cream); padding-bottom: 0.5rem;">
+                                        Detalles de la Referencia</h3>
+                                </div>
+
+                                <div class="form-group" style="grid-column: 1 / -1;">
+                                    <label>Motivo de la Referencia *</label>
+                                    <textarea name="reason" class="form-control" rows="3" required></textarea>
+                                </div>
+
+                                <div class="form-group" style="grid-column: 1 / -1;">
+                                    <label style="display: block; margin-bottom: 0.5rem;">Servicios Necesarios (Marque
+                                        todos los que apliquen)</label>
+                                    <div
+                                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <input type="checkbox" name="services_needed[]" value="Personal Support">
+                                            Apoyo Personal
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <input type="checkbox" name="services_needed[]" value="Supported Living">
+                                            Vida con Apoyo
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <input type="checkbox" name="services_needed[]" value="Nursing Support">
+                                            Apoyo de Enfermería
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <input type="checkbox" name="services_needed[]"
+                                                value="Community Development"> Desarrollo Comunitario
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <input type="checkbox" name="services_needed[]" value="Respite Care">
+                                            Cuidado de Relevo
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <input type="checkbox" name="services_needed[]" value="Employment Services">
+                                            Servicios de Empleo
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="grid-column: 1 / -1;">
+                                    <label>Detalles Adicionales</label>
+                                    <textarea name="additional_details" class="form-control" rows="4"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Pregunta de Seguridad: ¿Cuánto es 2 + 3? *</label>
+                                    <input type="number" name="math_answer" class="form-control" required>
+                                </div>
+
+                                <div style="grid-column: 1 / -1; text-align: center; margin-top: 1rem;">
+                                    <button type="submit" class="btn btn-primary" style="min-width: 250px;">Enviar
+                                        Referencia</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complaint Form -->
+                <div id="complaint-form" class="form-section" style="margin-top: 6rem;">
+                    <div class="contact-box">
+                        <div class="contact-info" style="background: var(--secondary);">
+                            <h2>Presentar una Queja</h2>
+                            <p>Complete el formulario de quejas para brindar sus comentarios o inquietudes. Nos tomamos
+                                todos los comentarios en serio mientras nos esforzamos por alcanzar la excelencia.</p>
+                        </div>
+                        <div class="contact-form-wrap">
+                            <form action="../../contact-handler.php" method="POST">
+                                <input type="hidden" name="form_type" value="complaint">
+                                <div class="form-group"
+                                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                    <div>
+                                        <label>Nombre *</label>
+                                        <input type="text" name="first_name" class="form-control" required>
+                                    </div>
+                                    <div>
+                                        <label>Apellido *</label>
+                                        <input type="text" name="last_name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Correo Electrónico *</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Número de Teléfono *</label>
+                                    <input type="tel" name="phone" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Sus Inquietudes *</label>
+                                    <textarea name="complaint" class="form-control" rows="5" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Pregunta de Seguridad: ¿Cuánto es 2 + 2? *</label>
+                                    <input type="number" name="math_answer" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn"
+                                    style="background: var(--secondary); color: white; width: 100%;">Enviar
+                                    Queja</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <p>Atención compasiva para personas con discapacidades intelectuales y del desarrollo en todo
+                        Maryland.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../who-we-are/index.html">Quiénes Somos</a></li>
+                        <li><a href="../services/index.html">Qué Hacemos</a></li>
+                        <li><a href="../career/index.html">Carreras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nuestras Oficinas</h4>
+                    <ul>
+                        <li><a href="index.html">Stevensville, MD</a></li>
+                        <li><a href="index.html">Silver Spring, MD</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Telecare Services. Todos los derechos reservados. | Empoderando Vidas, Construyendo
+                    Comunidades.</p>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">Designed by Endure PC</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>What We Do – Telecare Services</title>
+   <link rel="stylesheet" href="../assets/css/redesign.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style>
+      .service-full-card {
+         background: var(--white);
+         border-radius: var(--border-radius-lg);
+         overflow: hidden;
+         box-shadow: var(--shadow-soft);
+         margin-bottom: 4rem;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         transition: var(--transition);
+      }
+
+      .service-full-card:nth-child(even) {
+         direction: rtl;
+      }
+
+      .service-full-card:nth-child(even) .service-full-content {
+         direction: ltr;
+      }
+
+      .service-full-image {
+         background-size: cover;
+         background-position: center;
+         min-height: 400px;
+      }
+
+      .service-full-content {
+         padding: 4rem;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+
+      .service-full-content h3 {
+         color: var(--accent);
+         margin-bottom: 1.5rem;
+         font-size: 2.2rem;
+      }
+
+      .service-full-content p {
+         font-size: 1.1rem;
+         color: var(--text-muted);
+         line-height: 1.8;
+      }
+
+      @media (max-width: 992px) {
+         .service-full-card {
+            grid-template-columns: 1fr;
+         }
+
+         .service-full-card:nth-child(even) {
+            direction: ltr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   <header class="site-header">
+      <div class="container">
+         <div class="header-inner">
+            <div class="logo">
+               <a href="../index.html">
+                  <img src="../assets/wp-content/uploads/2023/11/T1.png" alt="Telecare Services Logo">
+               </a>
+            </div>
+            <div class="header-actions">
+               <nav class="main-nav">
+                  <ul>
+                     <li><a href="../index.html">HOME</a></li>
+                     <li><a href="../who-we-are/index.html">WHO WE ARE</a></li>
+                     <li><a href="index.html">WHAT WE DO</a></li>
+                     <li><a href="../career/index.html">CAREERS</a></li>
+                     <li><a href="../contact-us/index.html" class="cta-header">CONTACT US</a></li>
+                  </ul>
+               </nav>
+               <div class="lang-switcher">
+                  <a href="index.html" class="active">EN</a> |
+                  <a href="../es/services/index.html">ES</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <main>
+      <!-- Services Hero -->
+      <section class="hero" style="min-height: 40vh; padding: 4rem 0;">
+         <div class="container" style="text-align: center;">
+            <h1>Our Services</h1>
+            <p style="max-width: 800px; margin: 0 auto;">At Telecare Services, we provide a wide range of specialized
+               care solutions designed to empower individuals with IDD to lead independent and fulfilling lives.</p>
+         </div>
+      </section>
+
+      <!-- Detailed Services -->
+      <section class="services-detail-section" style="padding-bottom: 8rem;">
+         <div class="container">
+
+            <!-- Personal Support Services -->
+            <div class="service-full-card">
+               <div class="service-full-image"
+                  style="background-image: url('../assets/wp-content/uploads/2023/12/WhatsApp-Image-2023-11-24-at-5.15.48-PM-1024x722a.png');">
+               </div>
+               <div class="service-full-content">
+                  <h3>Personal Support Services</h3>
+                  <p>Our personal support services are tailored to meet the individual needs of each participant. We
+                     offer comprehensive assistance to foster independence and improve daily living skills. This can
+                     include help with personal care, meal preparation, medication reminders, or learning how to
+                     navigate the local community safely.</p>
+               </div>
+            </div>
+
+            <!-- Supported Living Services -->
+            <div class="service-full-card">
+               <div class="service-full-image"
+                  style="background-image: url('../assets/wp-content/uploads/2023/12/WhatsApp-Image-2023-11-24-at-5.15.48-PM-2-1024x692.jpeg');">
+               </div>
+               <div class="service-full-content">
+                  <h3>Supported Living Services</h3>
+                  <p>Our supported living services aim to create a home environment where individuals can thrive while
+                     receiving the necessary support to lead fulfilling lives within their communities. These services
+                     focus on empowering individuals to live as independently as possible in their own homes, while
+                     having support available when needed.</p>
+               </div>
+            </div>
+
+            <!-- Nursing Support Services -->
+            <div class="service-full-card">
+               <div class="service-full-image"
+                  style="background-image: url('../assets/wp-content/uploads/2023/12/WhatsApp-Image-2023-11-24-at-5.15.48-PM-5-1024x658.jpeg');">
+               </div>
+               <div class="service-full-content">
+                  <h3>Nursing Support Services</h3>
+                  <p>Our nursing support services ensure that participants receive specialized care and medical
+                     attention as needed, delivered by qualified healthcare professionals. This includes health
+                     monitoring, medication management, and coordination with other medical providers to ensure holistic
+                     health outcomes.</p>
+               </div>
+            </div>
+
+            <!-- Community Development Services (CDS) -->
+            <div class="service-full-card">
+               <div class="service-full-image"
+                  style="background-image: url('../assets/wp-content/uploads/2023/12/WhatsApp-Image-2023-11-24-at-5.15.48-PM-3-1024x667.jpeg');">
+               </div>
+               <div class="service-full-content">
+                  <h3>Community Development Services (CDS)</h3>
+                  <p>CDS focuses on fostering community engagement, encouraging social inclusion, and promoting active
+                     participation within diverse community settings. We help individuals explore their interests, join
+                     local clubs, and build meaningful relationships within their neighborhoods.</p>
+               </div>
+            </div>
+
+            <!-- Respite Care -->
+            <div class="service-full-card">
+               <div class="service-full-image"
+                  style="background-image: url('../assets/wp-content/uploads/2023/12/WhatsApp-Image-2023-11-24-at-5.15.48-PM-6-1024x643.jpeg');">
+               </div>
+               <div class="service-full-content">
+                  <h3>Respite Care</h3>
+                  <p>We provide temporary relief for caregivers through respite care services. These services offer
+                     short-term breaks, allowing caregivers to recharge while ensuring continuous care for participants.
+                     Whether it’s for a few hours or a few days, we provide a safe and nurturing environment.</p>
+               </div>
+            </div>
+
+            <!-- Employment Services -->
+            <div class="service-full-card">
+               <div class="service-full-image"
+                  style="background-image: url('../assets/wp-content/uploads/2023/12/WhatsApp-Image-2023-11-24-at-5.15.49-PM-1024x650.jpeg');">
+               </div>
+               <div class="service-full-content">
+                  <h3>Employment Services</h3>
+                  <p>At Telecare Services, we are committed to empowering individuals with disabilities by providing
+                     comprehensive employment services. Our goal is to ensure that each individual finds meaningful,
+                     long-term employment. We offer job development, training, and ongoing support to both the employee
+                     and employer.</p>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+      <!-- Final Call to Action -->
+      <section class="contact-section" style="background: var(--bg-cream); text-align: center;">
+         <div class="container">
+            <h2>Need more information?</h2>
+            <p>Learn more about how we can support you or your loved ones.</p>
+            <div style="margin-top: 2rem;">
+               <a href="../contact-us/index.html" class="btn btn-primary">Contact Us Today</a>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div class="container">
+         <div class="footer-grid">
+            <div class="footer-col">
+               <p>Compassionate care for individuals with intellectual and developmental disabilities across Maryland.
+               </p>
+            </div>
+            <div class="footer-col">
+               <h4>Quick Links</h4>
+               <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../who-we-are/index.html">Who We Are</a></li>
+                  <li><a href="index.html">What We Do</a></li>
+                  <li><a href="../career/index.html">Careers</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h4>Our Offices</h4>
+               <ul>
+                  <li><a href="../contact-us/index.html">Stevensville, MD</a></li>
+                  <li><a href="../contact-us/index.html">Silver Spring, MD</a></li>
+               </ul>
+            </div>
+
+         </div>
+         <div class="footer-bottom">
+            <p>&copy; 2026 Telecare Services. All rights reserved. | Empowering Lives, Building Communities.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">Designed by Endure PC</p>
+         </div>
+      </div>
+   </footer>
+</body>
+
+</html>
